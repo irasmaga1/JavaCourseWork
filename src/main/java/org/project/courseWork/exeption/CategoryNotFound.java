@@ -2,8 +2,8 @@ package org.project.courseWork.exeption;
 
 import jakarta.persistence.EntityNotFoundException;
 
-public class MatherialNotFound extends EntityNotFoundException {
-    public MatherialNotFound(String message) {
+public class CategoryNotFound extends EntityNotFoundException {
+    public CategoryNotFound(String message) {
         super(message);
     }
 }
