@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "supliers")
 @Getter
@@ -23,14 +25,13 @@ public class Suplier {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "category")
-    private String category;
-
-    @Column(name = "telephone_number")
-    private String telephoneNumber;
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
     @Column(name = "email")
     private String email;
 
+    @OneToMany(mappedBy = "suplier")
+    private List<Material> materialLists;
 
 }

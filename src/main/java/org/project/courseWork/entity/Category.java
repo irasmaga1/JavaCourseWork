@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "categories")
 
@@ -25,4 +27,10 @@ public class Category {
 
     @Column(name = "description")
     private String description;
+
+    @OneToMany(mappedBy = "category")
+    private  List<Material> materialList;
+
+
+
 }

@@ -1,5 +1,6 @@
 package org.project.courseWork.entity;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Materials {
+public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,9 +32,12 @@ public class Materials {
     @Column(name = "brand")
     private String brand;
 
-    @Column(name = "suplier_id")
-    private Long suplierId;
+    @ManyToOne
+    @JoinColumn(name = "suplier_id")
+    private Suplier suplier;
 
+    @ManyToOne
+    @JoinColumn
     @Column(name = "category_id")
-    private Long categoryId;
+    private Category category;
 }
