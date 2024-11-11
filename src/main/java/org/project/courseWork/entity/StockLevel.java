@@ -24,9 +24,9 @@ public class StockLevel {
     @Column(name = "minimal_quantity")
     private int minimalQuantity;
 
-
     @OneToOne
-    @Column(name = "matherial_id")
+//    @Column
+           @JoinColumn (name = "matherial_id")
     private Material matherial;
 
 }

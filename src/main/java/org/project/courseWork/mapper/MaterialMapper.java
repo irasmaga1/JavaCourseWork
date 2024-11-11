@@ -1,15 +1,15 @@
 package org.project.courseWork.mapper;
 
 import org.mapstruct.*;
-import org.project.courseWork.dto.MaterialsDto;
+import org.project.courseWork.dto.MaterialDto;
 import org.project.courseWork.entity.Material;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
-public interface MaterialsMapper {
-    Material toEntity(MaterialsDto materialsDto);
+public interface MaterialMapper {
+    Material toEntity(MaterialDto materialDto);
 
-    MaterialsDto toDto(Material material);
+    MaterialDto toDto(Material material);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Material partialUpdate(MaterialsDto materialsDto, @MappingTarget Material material);
+    Material partialUpdate(MaterialDto materialDto, @MappingTarget Material material);
 }

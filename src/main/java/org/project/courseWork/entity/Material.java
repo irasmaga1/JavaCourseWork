@@ -38,6 +38,7 @@ public class Material {
 
     @ManyToOne
     @JoinColumn
-    @Column(name = "category_id")
+//    @Column
+            (name = "category_id")
     private Category category;
 }
