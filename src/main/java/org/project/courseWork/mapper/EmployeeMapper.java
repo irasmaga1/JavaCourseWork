@@ -1,6 +1,7 @@
 package org.project.courseWork.mapper;
 
 import org.mapstruct.*;
+import org.project.courseWork.dto.EmployeeCreationDto;
 import org.project.courseWork.dto.EmployeeDto;
 import org.project.courseWork.entity.Employee;
 
@@ -12,4 +13,11 @@ public interface EmployeeMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Employee partialUpdate(EmployeeDto employeeDto, @MappingTarget Employee employee);
+
+    Employee toEntity(EmployeeCreationDto employeeCreationDto);
+
+    EmployeeCreationDto toDto1(Employee employee);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    Employee partialUpdate(EmployeeCreationDto employeeCreationDto, @MappingTarget Employee employee);
 }
