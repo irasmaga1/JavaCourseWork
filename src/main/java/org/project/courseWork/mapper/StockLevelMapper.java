@@ -16,8 +16,5 @@ public interface StockLevelMapper {
 
     StockLevel toEntity(StockLevelCreationDto stockLevelCreationDto);
 
-    StockLevelCreationDto toDto1(StockLevel stockLevel);
 
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    StockLevel partialUpdate(StockLevelCreationDto stockLevelCreationDto, @MappingTarget StockLevel stockLevel);
 }

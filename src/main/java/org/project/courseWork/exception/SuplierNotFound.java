@@ -1,4 +1,4 @@
-package org.project.courseWork.exeption;
+package org.project.courseWork.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 

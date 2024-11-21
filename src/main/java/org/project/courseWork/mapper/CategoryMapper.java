@@ -16,8 +16,4 @@ public interface CategoryMapper {
 
     Category toEntity(CategoryCreationDto categoryCreationDto);
 
-    CategoryCreationDto toDto1(Category category);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Category partialUpdate(CategoryCreationDto categoryCreationDto, @MappingTarget Category category);
 }

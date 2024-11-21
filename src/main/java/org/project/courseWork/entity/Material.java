@@ -2,18 +2,16 @@ package org.project.courseWork.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
-@Table (name = "matherials")
+@Table (name = "materials")
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 
 public class Material {
     @Id
@@ -37,8 +35,6 @@ public class Material {
     private Suplier suplier;
 
     @ManyToOne
-    @JoinColumn
-//    @Column
-            (name = "category_id")
+    @JoinColumn(name = "category_id")
     private Category category;
 }

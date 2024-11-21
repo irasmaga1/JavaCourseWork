@@ -16,8 +16,5 @@ public interface EmployeeMapper {
 
     Employee toEntity(EmployeeCreationDto employeeCreationDto);
 
-    EmployeeCreationDto toDto1(Employee employee);
 
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Employee partialUpdate(EmployeeCreationDto employeeCreationDto, @MappingTarget Employee employee);
 }

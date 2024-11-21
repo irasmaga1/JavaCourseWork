@@ -16,8 +16,5 @@ public interface SuplierMapper {
 
     Suplier toEntity(SuplierCreationDto suplierCreationDto);
 
-    SuplierCreationDto toDto1(Suplier suplier);
 
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Suplier partialUpdate(SuplierCreationDto suplierCreationDto, @MappingTarget Suplier suplier);
 }
